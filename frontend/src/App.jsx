@@ -160,6 +160,7 @@ export function App() {
   }
 
   const isWriter = user?.role === "writer";
+  const tidying = rows.some((r) => r.status === "pending" || r.status === "processing");
 
   return (
     <div class="wrap">
@@ -215,7 +216,7 @@ export function App() {
       )}
 
       <div class="card">
-        <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>读数列表 <span class="tag wait">整理进行中</span></h2>
+        <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>读数列表 {tidying && <span class="tag wait">整理进行中</span>}</h2>
         <table>
           <thead>
             <tr>
