@@ -215,7 +215,7 @@ export function App() {
       )}
 
       <div class="card">
-        <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>读数列表 <span class="tag wait">整理进行中</span></h2>
+        <h2 style={{ marginTop: 0, fontSize: "1.1rem" }}>读数列表</h2>
         <table>
           <thead>
             <tr>

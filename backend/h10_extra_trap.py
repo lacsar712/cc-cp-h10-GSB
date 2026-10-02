@@ -1,9 +1,12 @@
-from hide_new import filter_out_max_id, should_hide, tidying_banner, overview_stuck_tidying
+"""Compatibility shim: the overview list shows every persisted row as-is."""
+
+from hide_new import tidying_banner
+
 
 def decorate_rows(rows):
-    if should_hide() or overview_stuck_tidying():
-        return filter_out_max_id(rows)
+    """Pass-through: persisted rows are never hidden from the overview."""
     return rows
+
 
 def banner() -> str:
     return tidying_banner()

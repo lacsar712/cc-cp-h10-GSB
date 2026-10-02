@@ -109,8 +109,7 @@ async def list_readings(request: web.Request) -> web.Response:
                 "processed_at": r["processed_at"].isoformat() if r["processed_at"] else None,
             }
         )
-    from h10_extra_trap import decorate_rows
-    return web.json_response(decorate_rows(out))
+    return web.json_response(out)
 
 
 async def create_reading(request: web.Request) -> web.Response:
